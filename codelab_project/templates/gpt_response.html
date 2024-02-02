@@ -1,0 +1,7 @@
+
+<form method="post">
+    {% csrf_token %}
+    <p>応答: <textarea name="gpt_output" cols="50">{{ gpt_response }}</textarea></p>
+    <textarea name="user_input" rows="4" cols="50"></textarea>
+    <input type="submit" value="送信">
+</form>
