@@ -1,0 +1,15 @@
+<form method="post">
+    {% csrf_token %}
+    <div>
+        {% for line in conversation %}
+        <p>応答: <textarea name="gpt_output" cols="50">{{ line }}</textarea></p>
+        {% endfor %}
+    </div>
+    <!-- <div markdown="1">
+        {% for line in conversation %}
+        <p>{{ line }}</p>
+        {% endfor %}
+    </div> -->
+    <textarea name="user_input" rows="4" cols="50"></textarea>
+    <input type="submit" value="送信">
+</form>

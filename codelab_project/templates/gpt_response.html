@@ -1,4 +1,14 @@
-
+{% for item in object_list %}
+<p>
+    being asked
+</p>
+<p>
+    {{ item.user_input }}
+</p>
+<p>
+    {{ item.gpt_output }}
+</p>
+{% endfor %}
 <form method="post">
     {% csrf_token %}
     <p>応答: <textarea name="gpt_output" cols="50">{{ gpt_response }}</textarea></p>
