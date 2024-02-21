@@ -26,7 +26,7 @@ SECRET_KEY = 'gxmv$r&afr1l(io-erez)iy94x(c$s)7u1dp49be3yk6c3tl_a'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['tiz.pythonanywhere.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'tiz.pythonanywhere.com']
 
 
 # Application definition

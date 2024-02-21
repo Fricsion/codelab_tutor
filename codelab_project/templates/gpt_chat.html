@@ -1,8 +1,15 @@
+<script type="text/javascript">
+    function autoGrow(element) {
+        element.style.height = "5px";
+        element.style.height = (element.scrollHeight)+"px";
+    }
+</script>
+
 <form method="post">
     {% csrf_token %}
     <div>
         {% for line in conversation %}
-        <p>応答: <textarea name="gpt_output" cols="50">{{ line }}</textarea></p>
+        <p>応答: <textarea name="gpt_output" cols="50" oninput="autoGrow(this)">{{ line }}</textarea></p>
         {% endfor %}
     </div>
     <!-- <div markdown="1">
